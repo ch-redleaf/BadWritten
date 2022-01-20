@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: myself-badwritten-user
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: user-config
+        file-extension: yaml
+        group: dev
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public
+server:
+  port: 8080
+
+
