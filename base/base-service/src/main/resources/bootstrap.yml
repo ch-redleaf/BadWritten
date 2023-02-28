@@ -1,0 +1,79 @@
+
+spring:
+  application:
+    name: myself-badwritten-user
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.31.5:8848
+        group: dev
+        prefix: user-config
+        file-extension: yaml
+        namespace: cbc0c63d-5caf-4f3c-9e16-e8f54ec90067
+        username: nacos
+        password: nacos
+      discovery:
+        group: dev
+        server-addr: 192.168.31.5:8848
+        namespace: cbc0c63d-5caf-4f3c-9e16-e8f54ec90067
+        username: nacos
+        password: nacos
+
+    stream:
+      rabbit:
+        binder:
+          admin-addresses: 192.168.31.5:15672
+          nodes: rabbit@192.168.31.5
+
+
+  rabbitmq:
+    addresses: 192.168.31.5:5672
+    username: admin
+    password: admin
+    virtual-host: /
+    ssl:
+      enabled: false
+      key-store:
+
+
+
+# Spring
+#spring:
+#  application:
+#    # 应用名称
+#    name: myself-badwritten-user
+#  profiles:
+#    # 默认使用生产环境
+#    active: dev
+#  cloud:
+#    nacos:
+#      discovery:
+#        # 服务注册地址
+#        server-addr: ${spring.nacos-server-addr}
+#        username: nacos
+#        password: nacos
+#      config:
+#        # 配置中心地址
+#        server-addr: ${spring.nacos-server-addr}
+#        # 配置文件格式
+#        file-extension: yml
+#        # 共享配置
+#        shared-configs:
+#          - dataid: user-config.${spring.cloud.nacos.config.file-extension}
+#            refresh: true # 自动刷新
+#        group: dev
+#
+#---
+## 开发环境
+#Spring:
+#  config.activate.on-profile: dev
+#  nacos-server-addr: 192.168.31.5:8848
+#
+#---
+## 生产环境
+#spring:
+#  config.activate.on-profile: prod
+#  nacos-server-addr: 192.168.1.88:8848
+
+

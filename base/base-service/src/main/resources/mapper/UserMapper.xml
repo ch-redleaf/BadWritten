@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myself.badwritten.base.dao.UserMapper">
+
+    <!-- 开启二级缓存 -->
+<!--    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>-->
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="myself.badwritten.common.model.User">
+        <id column="USER_ID" property="userId" />
+        <result column="ACCOUNT_ID" property="accountId" />
+        <result column="IS_DELETE" property="isDelete" />
+        <result column="USER_NAME" property="userName" />
+        <result column="MOBILE" property="mobile" />
+        <result column="EMAIL" property="email" />
+        <result column="CREATE_TIME" property="createTime" />
+        <result column="SEX" property="sex" />
+        <result column="IS_DEFAULT_CONTACT" property="isDefaultContact" />
+        <result column="USER_TEL" property="userTel" />
+        <result column="USER_FAX" property="userFax" />
+    </resultMap>
+
+</mapper>

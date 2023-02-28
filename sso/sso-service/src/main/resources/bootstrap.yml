@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: myself-badwritten-sso
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.31.5:8848
+        group: dev
+        prefix: sso-config
+        file-extension: yaml
+        namespace: cbc0c63d-5caf-4f3c-9e16-e8f54ec90067
+        username: nacos
+        password: nacos
+      discovery:
+        group: dev
+        server-addr: 192.168.31.5:8848
+        namespace: cbc0c63d-5caf-4f3c-9e16-e8f54ec90067
+        username: nacos
+        password: nacos
+
+

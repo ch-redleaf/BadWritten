@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.redLeaf</groupId>
-    <artifactId>sso</artifactId>
+    <artifactId>base</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>sso-api</module>
-        <module>sso-service</module>
+        <module>base-service</module>
+        <module>base-api</module>
     </modules>
 
 
@@ -34,7 +34,7 @@
     <!-- 子模块继承之后，提供作用：锁定版本+子modlue不用写groupId和version  -->
     <dependencyManagement>
         <dependencies>
-            <!--            spring boot 2.2.2-->
+<!--            spring boot 2.2.2-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -42,7 +42,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--            spring cloud Hoxton.SR1-->
+<!--            spring cloud Hoxton.SR1-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -68,11 +68,11 @@
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
             </dependency>
-            <!--            <dependency>-->
-            <!--                <groupId>com.baomidou</groupId>-->
-            <!--                <artifactId>mybatis-plus-boot-starter</artifactId>-->
-            <!--                <version>${mybatisPlus.spring.boot.version}</version>-->
-            <!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.baomidou</groupId>-->
+<!--                <artifactId>mybatis-plus-boot-starter</artifactId>-->
+<!--                <version>${mybatisPlus.spring.boot.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
